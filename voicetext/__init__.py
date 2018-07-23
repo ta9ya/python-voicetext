@@ -181,7 +181,7 @@ class VoiceText(object):
         data = temp.readframes(self.CHUNK)
         while data:
             stream.write(data)
-            data = temp.readframes(min(data, self.CHUNK))
+            data = temp.readframes(self.CHUNK)
         stream.close()
         temp.close()
 
